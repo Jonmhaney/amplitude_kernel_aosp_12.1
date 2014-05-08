@@ -32,8 +32,19 @@ modules.builtin
 *.lzo
 *.patch
 *.gcno
+<<<<<<< HEAD
 *.img
 *.zip
+=======
+<<<<<<< HEAD
+=======
+*.zip
+*.lzo
+*.img
+zImage*
+vmlinux*
+>>>>>>> df34dee...   msm: clock-krait-8974: User voltage control for msm-cpufreq device
+>>>>>>> 970a8a0...   msm: clock-krait-8974: User voltage control for msm-cpufreq device
 
 #
 # Top-level generic files
