@@ -650,3 +650,11 @@ service pre-recovery /system/bin/uncrypt
     class main
     disabled
     oneshot
+<<<<<<< HEAD
+=======
+
+service post-init /sbin/post-init.sh
+    class core
+    user root
+    oneshot
+>>>>>>> 1ef003b... Prevent memory overflow in video, added a bound check
