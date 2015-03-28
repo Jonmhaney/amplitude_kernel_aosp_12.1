@@ -641,3 +641,6 @@ CONFIG_DEFAULT_TCP_CONG="westwood"
 
 # power suspend
 CONFIG_POWERSUSPEND=y
+
+# Alucard
+CONFIG_ALUCARD_HOTPLUG=y
