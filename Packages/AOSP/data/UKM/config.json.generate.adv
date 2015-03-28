@@ -140,7 +140,6 @@ cat << CTAG
 						action:"generic /sys/kernel/mm/uksm/max_cpu_percentage"
 					}},'
 			fi`
-<<<<<<< HEAD
 			`if [ -f "/sys/kernel/mm/pksm/run" ]; then
 			PKSM=\`$BB cat /sys/kernel/mm/pksm/run\`
 			PTS=\`$BB cat /sys/kernel/mm/pksm/pages_to_scan\`
@@ -191,8 +190,6 @@ cat << CTAG
 						action:"generic /sys/kernel/mm/pksm/deferred_timer"
 					}},'
 			fi`
-=======
->>>>>>> 1ef003b... Prevent memory overflow in video, added a bound check
 			`if [ -f "/sys/kernel/sched/gentle_fair_sleepers" ]; then
 			GFS=\`$BB cat /sys/kernel/sched/gentle_fair_sleepers\`
 			
