@@ -344,9 +344,9 @@ on boot
     write /proc/sys/vm/overcommit_memory 1
     write /proc/sys/vm/min_free_order_shift 4
     chown root system /sys/module/lowmemorykiller/parameters/adj
-    chmod 0220 /sys/module/lowmemorykiller/parameters/adj
+    chmod 0660 /sys/module/lowmemorykiller/parameters/adj
     chown root system /sys/module/lowmemorykiller/parameters/minfree
-    chmod 0220 /sys/module/lowmemorykiller/parameters/minfree
+    chmod 0660 /sys/module/lowmemorykiller/parameters/minfree
 
     # Tweak background writeout
     write /proc/sys/vm/dirty_expire_centisecs 200
@@ -649,4 +649,11 @@ service mdnsd /system/bin/mdnsd
 service pre-recovery /system/bin/uncrypt
     class main
     disabled
+    oneshot
+
+# Call Boeffla-Kernel init script
+service boeffla-init /sbin/boeffla-init-starter.sh
+    class main
+    user root
+    group root
     oneshot
